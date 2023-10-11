@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document 객체</title>
+    <style>
+        .container{
+            width: 600px;
+            height: 400px;
+            background-color: beige;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .blue {
+            background-color: darkblue;
+        }
+        .red{
+            background-color: crimson;
+        }
+        .yellow {
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box blue"></div>
+        <div class="box red"></div>
+        <div class="box yellow"></div>
+    </div>
+
+    <!-- input 태그를 선택해서 placeholder 속성 추가 -->
+    <input type="text" name="name" />
+
+    <div>
+        <button type="button" onclick="click()">click1</button>
+        <button type="button" onclick="add()" id="inputName">click2</button>
+    </div>
+
+    <script>
+        const boxes=document.querySelectorAll(".box")
+        let b1 = boxes[1];
+        b1.innerHTML="Gul";
+
+        function click(){
+            b1.classList.toggle("red");
+        };
+
+        let input = document.querySelector("input");
+        function add(){
+            input.setAttribute("placeholder", "hello world");
+            input.setAttribute("id", "inputName");
+        }
+
+    </script>
+</body>
+</html>

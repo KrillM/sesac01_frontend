@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document 객체</title>
+    <style>
+        .container{
+            width: 600px;
+            height: 400px;
+            background-color: beige;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .black {
+            background-color: black;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box black"></div>
+        <div class="box yellow"></div>
+        <div class="box red"></div>
+    </div>
+    <div>
+        <button type="button" onclick="add()">박스 추가</button>
+        <button type="button" onclick="removeBox()">박스 제거</button>
+    </div>
+
+    <script>
+        function add(){
+            var container=document.querySelector(".container");
+            var box = document.createElement("div");
+            box.className="box black";
+        }
+    </script>
+</body>
+</html>

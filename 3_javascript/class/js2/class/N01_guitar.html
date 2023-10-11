@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+</head>
+<body>
+    <script>
+        // 기본 자료형
+        let n1=5;
+        let n2=n1;
+        n2+=5;
+        console.log(n1, n2);
+
+        // 객체 자료형 (얕은 복사)
+        let arr1=[1,2,3,4,5]
+        let arr2=arr1;
+
+        arr2.reverse();
+        console.log(arr1,arr2);
+
+        // 기본 자료형처럼 사용하고 싶다면 (깊은 복사)
+        let arr3=[1,2,3,4]
+        let arr4=arr3.slice();
+
+        arr4.reverse();
+        console.log(arr3, arr4);
+
+        // 날짜
+        let today = new Date();
+        console.log(today);
+
+        let orangeBottle = new Date(72,11,21);
+        console.log(orangeBottle);
+
+        let date=new Date();
+        console.log(date.getFullYear());
+        console.log(date.getMonth()+1);
+        console.log(date.getDate());
+        console.log(date.getDay()); // 요일
+        console.log(date.getTime());
+        console.log(date.getHours());
+
+        let expired = new Date("2023-09-22").getTime();
+        let oneul = new Date();
+
+        if(expired<oneul){
+            console.log("expired")
+        }
+    </script>
+</body>
+</html>

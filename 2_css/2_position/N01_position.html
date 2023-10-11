@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>Css Position</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            position: relative;
+            background-color: aquamarine;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        #item1{
+            top:30px;
+            left:50px;
+            position: relative;
+            background-color: darkblue;
+            color: gold;
+        }
+        #item2{
+            bottom:100px;
+            right:30px;
+            background-color: crimson;
+            color: gold;
+            position: absolute;
+        }
+        #item3{
+            top:100px;
+            right:100px;
+            position: fixed;
+            background-color: darkgreen;
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="item1">Box 1</div>
+        <div class="box" id="item2">Box 2</div>
+        <div class="box" id="item3">Box 3</div>
+    </div>
+</body>
+</html>

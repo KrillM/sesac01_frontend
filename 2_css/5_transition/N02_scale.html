@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>CSScale</title>
+</head>
+<body>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .div1:hover {
+            transform: scale(2);
+            background-color: yellow;
+        }
+        .div2:hover {
+            transform: scale(0.5);
+            background-color: greenyellow;
+        }
+        .div3:hover {
+            transform: scaleX(2);
+            background-color: skyblue;
+        }
+        .div4:hover {
+            transform: scaleY(2);
+            background-color: pink;
+        }
+    </style>
+    <div class="div1">scale 2</div>
+    <div class="div2">scale 0.5</div>
+    <div class="div3">scaleX 2</div>
+    <div class="div4">scaleY 2</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>My HTML</title>
+</head>
+<body>
+    <h1>My FrontEnd Page</h1>
+    <p>Meun</p>
+    <ul>
+        <li><a href="N11_avengers.html">어벤저스 선생님들</a></li>
+        <li><a href="N14_youTube.html">게임 영상 보러가기</a></li>
+    </ul>
+    <h2>코디 소개</h2>
+    <img src="images/lebao.jpg" width="300px"/>
+    <p>안녕하세요 <span style="color: yellowgreen; font-weight: bolder;">러바오</span>입니다.</p>
+    <iframe width="642" height="361" src="https://www.youtube.com/embed/3srmmmXtAZ8" title="I just ride motorcycle..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <span>동영상 올리고 싶었는데 맥린이라 아직 모르겠어요</span>
+
+    <h3>코디가 가장 좋아하는 음식</h3>
+    <ol>
+        <li>
+            한식
+            <ul>
+                <li>육회</li>
+                <li>삼계탕</li>
+            </ul>
+        </li>
+        <li>
+            이탈리아 요리
+            <ul>
+                <li>
+                    파스타
+                    <li>까르보나라</li>
+                    <li>알리오올리오</li>
+                </li>
+                <li>마르게리타</li>
+                <li>에소프레소</li>
+            </ul>
+        </li>
+        <li>
+            일본 요리
+            <ul>
+                <li>스시</li>
+                <li>라멘</li>
+                <li>오코노미야끼</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>코디의 취미생활</h3>
+    <table border="1" cellspacing="0" cellpadding="10">
+        <caption>코디의 취미 내용</caption>
+        <thead>
+            <tr>
+                <th>취미 내용</th>
+                <th>Detail</th>
+                <th>사진</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4">여행</td>
+            </tr>
+            <tr>
+                <td>대만 여행</td>
+                <td><img src="trip/20180627_161921.jpg" width="200px"></td>
+            </tr>
+            <tr>
+                <td>교토 여행</td>
+                <td><img src="trip/2023-03-01-13-33-38-381.jpg" width="200px"></td>
+            </tr>
+            <tr>
+                <td>오사카 여행</td>
+                <td><img src="trip/2023-02-28-14-16-45-954.jpg"  width="200px"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">저의 취미생활 잘 보셨나요?</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h2>코디에게 한 마디</h2>
+    <form action="#" name="profile" method="get">
+        <legend>작성자 기본 정보</legend>
+        <p>
+            이름 :
+            <input type="text" name="name"/>
+        </p>
+        <p>
+            성별 :
+            <input type="radio" name="gender"/> 여성 
+            <input type="radio" name="gender"/> 남성 
+        </p>
+        <p>
+            취미 (중복 가능):
+            <input type="checkbox" name="trip"/> 여행
+            <input type="checkbox" name="game"/> 게임
+            <input type="checkbox" name="read"/> 독서
+            <input type="checkbox" name="sport"/> 스포츠
+            <input type="checkbox" name="rest"/> 기타
+        </p>
+        <p>
+            좋아하는 색
+            <input type="button" name="color" />
+            <input type="reset" value="초기화"/>
+        </p>
+        <label>코디에게 한 마디</label>
+        <textarea rows="10" cols="50"></textarea>
+    </form>
+    <input type="submit" value="제출"/>
+    <div>코디에 대해 더 알고 싶다면 <a href="N01_basic.html">블로그</a>에 방문해주세요.</div>
+</body>
+</html>

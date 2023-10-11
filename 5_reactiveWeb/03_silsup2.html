@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0"> 
+        <title>viewport</title>
+        <style>
+            .box{
+                margin: 30px;
+                width: 100px;
+                height: 100px;
+            }
+            .crimson{
+                background-color: crimson;
+            }
+            .darkblue{
+                background-color: darkblue;
+            }
+            .olive{
+                background-color: olive;
+            }
+            @media screen and (min-width: 700px) {
+                .container{
+                    display: flex;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box crimson"></div>
+            <div class="box darkblue"></div>
+            <div class="box olive"></div>
+        </div>
+    </body>
+</html>

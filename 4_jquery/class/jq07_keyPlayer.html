@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>Event Key</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <input type="password" name="password"/>    
+    <script>
+        // keydown  선택 요소에서 키보드를 누룬 상태
+        // keyup    선택 요소에서 키보드를 뗀 상태
+        $("input[name=password]").keyup(function(event){
+            if(event.key=="a")console.log("key", this.value);
+            if(event.keyCode==67)console.log("key", this.value);
+        })
+
+        // on: 이벤트를 가지겠다.
+        $("input[name=password]").on("keyup", (function(event){
+            if(event.key=="a")console.log("key", this.value);
+            if(event.keyCode==67)console.log("key", this.value);
+        }));
+    </script>
+</body>
+</html>

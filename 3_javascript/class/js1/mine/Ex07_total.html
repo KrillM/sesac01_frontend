@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>JavaScript</title>
+    <script>
+        let total=0;
+        for(let i=0;i<=100;i++){
+            if(i%2==0){
+                total+=i;
+            }
+        }
+        console.log(total);
+
+        let total2=0;
+        for(let i=0;i<=100;i++){
+            if(i%5==0){
+                total2+=i;
+            }
+        }
+        console.log(total2);
+
+        let min=0;
+        let total3=Number(total)+Number(total2);
+        console.log(total3);
+        for(let i=0;i<=100;i++){
+            if(i%10==0){
+                min+=i;
+            }
+        }
+        total3=Number(total3)-Number(min);
+        console.log(total3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

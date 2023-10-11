@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>JavaScript</title>
+    <script>
+        // 꾸러미
+        let cat = {
+            name: 'nabi',
+            age: 3,
+            isCute: true,
+            mew: function(){
+                return 'mew';
+            },
+        }
+
+        console.log(cat.name);
+        console.log(cat.age);
+        console.log(cat.isCute);
+        console.log(cat.mew);
+
+        // while 문
+        var i = 1;
+        var total=0;
+        while (i < 11) { // 변수 i가 10보다 작을 때만 while 문을 반복함.
+            total+=i;
+            i++; // 반복할 때마다 변수 i를 1씩 증가시켜 변수 i가 10보다 커지면 반복문을 종료함.
+        }
+        console.log(total);
+
+        // for 문
+        var arr = [1,2,3,4,5];
+
+        for (var i = 0; i < arr.length; i++) { // 배열 arr의 모든 요소의 인덱스(index)를 출력함.
+            console.log(arr[i] + " ");
+        }
+
+        for (var value of arr) { // 위와 같은 동작을 하는 for / of 문
+            console.log(value + " ");
+        }
+
+        // 타입 알려줘여
+        let seven=7;
+        console.log(typeof "타입을 친절하게 일려줘여");
+        console.log(typeof seven); 
+    </script>
+</head>
+<body>
+
+</body>
+</html>

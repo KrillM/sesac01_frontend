@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>DOM</title>
+</head>
+<body>
+    <div id="a">Apple</div>
+    <div class="b">Banana</div>
+    <div class="b">Ball</div>
+    
+    <p>PineApple</p>
+    <input type="text" name="name"/>
+    <br/>
+    <div id="typing">This is <i>Typing</i> Sector</div>
+
+    <script>
+        let i=document.getElementById("a");
+        console.log(i);
+
+        let c=document.getElementsByClassName("b");
+        console.log(c);
+
+        let f=document.getElementsByTagName("p");
+        console.log(f);
+
+        let t=document.getElementsByName("name");
+        console.log(t);
+
+        let y=document.getElementById("typing");
+        console.log(y);
+        console.log(y.innerText);
+        console.log(y.innerHTML);
+
+        y.innerText="Cat loves fishes";
+        y.innerHTML="Cat loves <strong>fishes</strong>";
+    </script>
+</body>
+</html>

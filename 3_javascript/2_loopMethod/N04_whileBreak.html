@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>while break</title>
+    </head>
+    <body>
+        <script>
+            let n=1;
+            let sum=0;
+
+            while(true){
+                if(n%2==0 || n%3==0){
+                    sum+=n;
+                }
+
+                if(n==100){
+                    break;
+                }
+                n++;
+            }
+
+            console.log(sum);
+        </script>
+    </body>
+</html>

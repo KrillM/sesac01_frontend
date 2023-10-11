@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>CSS change</title>
+</head>
+<body>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: move 5s linear infinite;
+        }
+        @keyframes move {
+            0%{
+                left: 0px;
+                background-color: darkblue;
+            }
+            25%{
+                left: 250px;
+                background-color: blue;
+            }
+            50%{
+                left: 500px;
+                background-color: skyblue;
+            }
+            75%{
+                left: 250px;
+                background-color: blue;
+            }
+            100%{
+                left: 0px;
+                background-color: darkblue;
+            }
+        }
+    </style>
+    
+    <div></div>
+</body>
+</html>

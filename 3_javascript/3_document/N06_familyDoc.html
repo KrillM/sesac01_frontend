@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <!-- 주석 작성 -->
+        <span id="span1">1</span>
+        <span id="span2">2</span>
+        <span id="span3">3</span>
+    </div>
+    <script>
+        const box = document.querySelector(".box");
+        const span1 = document.querySelector("#span1");
+        console.log(box.children);
+        console.log(box.children[0]);
+        console.log(box.childNodes);
+
+        console.log(document.documentElement.parentElement); // null
+        console.log(document.documentElement.parentNode);
+    </script>
+</body>
+</html>

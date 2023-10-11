@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>Virtual Selector</title>
+    <style>
+        [disabled]{
+            background-color: red;
+        }
+        [placeholder="이름"]{
+            background-color: orange;
+        }
+        input:not([placeholder]){
+            background-color: blue;
+            color: beige;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="이름" />
+    <input type="password" value="pw" />
+    <input type="text" value="010-0000-0000" />
+    <input type="text" placeholder="핸드폰" />
+    <input type="text" placeholder="주민번호" disabled />
+</body>  
+</html>

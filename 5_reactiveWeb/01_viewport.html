@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0"> 
+        <title>viewport</title>
+        <style>
+            .container{
+                display: flex;
+                width: 600px;
+                height: 400px;
+                background-color: bisque;
+            }
+            .box{
+                width: 200px;
+                height: 200px;
+            }
+            .crimson{
+                background-color: crimson;
+            }
+            .darkblue{
+                background-color: darkblue;
+            }
+            .olive{
+                background-color: olive;
+            }
+
+            @media screen and (max-width: 600px) {
+                /* 600픽셀 이하인 경우 */
+                .container{
+                    width: 300px;
+                    height: 200px;
+                    background-color: brown;
+                }
+                .box{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            @media screen and (min-width: 900px) {
+                /* 900픽셀 이상인 경우 */
+                .container{
+                    width: 900px;
+                    height: 600px;
+                }
+                .box{
+                    width: 300px;
+                    height: 600px;
+                }
+                .crimson{
+                    background-color: darkblue;
+                }
+                .darkblue{
+                    background-color: white;
+                }
+                .olive{
+                    background-color: crimson;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box crimson"></div>
+            <div class="box darkblue"></div>
+            <div class="box olive"></div>
+        </div>
+    </body>
+</html>

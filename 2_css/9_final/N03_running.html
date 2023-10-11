@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        #ball {
+            width: 50px;
+            height: 50px;
+            background: pink;
+            position: absolute;
+            border-radius: 70%;
+            animation-name: rectangle;
+            animation-iteration-count: 6;
+            animation-duration: 3s;
+        }
+
+        @keyframes rectangle {
+            from,
+            to {
+                top: 0px;
+                left: 0px;
+                /* animation-timing-function: ease-out; */
+            }
+            25% {
+                top: 0px;
+                left: 200px;
+            }
+            50% {
+                top: 200px;
+                left: 200px;
+                /* animation-timing-function: ease-in; */
+            }
+            75% {
+                top: 200px;
+                left: 0px;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div id="ball"></div>
+    </body>
+</html>

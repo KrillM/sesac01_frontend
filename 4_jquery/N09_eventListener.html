@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .hover {
+            background-color: red;
+        }
+        body {
+            height: 1000px;
+        }
+        p {
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <button class="bt1">button1</button>
+    <button class="bt2">button2</button>
+    <input />
+    <p>Coding On</p>
+    <script>
+        $(".bt1").click(function () {
+        alert("click");
+        });
+        $("input").mouseover(function () {
+        alert("mouseover");
+        });
+        $(".bt2").hover(
+        function () {
+            $(this).addClass("hover");
+        },
+        function () {
+            $(this).removeClass("hover");
+        }
+        );
+        $(window).scroll(function () {
+        if ($(document).scrollTop() > 50) {
+            $("p").css("backgroundColor", "green");
+        } else {
+            $("p").css("backgroundColor", "red");
+        }
+        });
+    </script>
+</body>
+</html>

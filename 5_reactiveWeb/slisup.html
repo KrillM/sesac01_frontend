@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/837ff3adc1.js" crossorigin="anonymous"></script>
+    <style>
+    :root {
+        --nav-height-lg: 100px;
+        --nav-height-sm: 60px;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        text-align: center;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .inner{
+        display: flex;
+    }
+
+    header {
+        width: 100%;
+        height: var(--nav-height-lg);
+        z-index: 100;
+        /* position: fixed; */
+    }
+
+    header .inner .logo {
+        display: flex;
+        color: white;
+        font-size: 30px;
+    }
+
+    @media screen and (min-width: 768px) {
+        header .inner {
+            background-color: lightblue;
+            height: 100%;
+        }
+
+        header .inner .menu {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        header .inner .menu li {
+            font-weight: bold;
+            margin-left: 30px;
+            justify-content: center;
+        }
+    }
+
+    /* 미디어 쿼리 작성 768px 이하일 때  */
+    @media screen and (max-width: 767px) {
+        .inner {
+            background-color: lightblue;
+        }
+
+        header .inner .menu {
+            display: inline;
+        }
+
+        header .inner .menu li {
+            font-weight: 200;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            justify-content: center;
+        }
+        li{
+            background-color: greenyellow;
+        }
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="inner">
+        <div class="logo">
+          <i class="fa-solid fa-igloo"></i>
+        </div>
+        <ul class="menu">
+          <li>메뉴1</li>
+          <li>메뉴2</li>
+          <li>메뉴3</li>
+          <li>메뉴4</li>
+        </ul>
+      </div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>신나는 html</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <table border="0" cellspacing="0" cellpadding="30">
+        <th>
+            <td style="text-align: center; color: green;" colspan="6">2019년 6월</td>
+        </th>
+        <tr>
+            <td style="color: red;">SUN</td>
+            <td>MON</td>
+            <td>TUE</td>
+            <td>WED</td>
+            <td>THU</td>
+            <td>FRI</td>
+            <td style="color: blue;">SAT</td>
+        </tr>
+        <tr>
+            <td style="color: red;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="color: blue;" value="1">1</td>
+        </tr>
+        <tr>
+            <td style="color: red;" value="2">2</td>
+            <td value="3">3</td>
+            <td value="4">4</td>
+            <td value="5">5</td>
+            <td style="color: red;" value="6">6</td>
+            <td value="7">7</td>
+            <td style="color: blue;" value="8">8</td>
+        </tr>
+        <tr>
+            <td style="color: red;" value="9">9</td>
+            <td value="10">10</td>
+            <td value="11">11</td>
+            <td value="12">12</td>
+            <td value="13">13</td>
+            <td value="14">14</td>
+            <td style="color: blue;" value="15">15</td>
+        </tr>
+        <tr>
+            <td style="color: red;" value="16">16</td>
+            <td value="17">17</td>
+            <td value="18">18</td>
+            <td value="19">19</td>
+            <td value="20">20</td>
+            <td value="21">21</td>
+            <td style="color: blue;" value="22">22</td>
+        </tr>
+        <tr>
+            <td style="color: red;" value="23">23</td>
+            <td value="24">24</td>
+            <td value="25">25</td>
+            <td value="26">26</td>
+            <td value="27">27</td>
+            <td value="28">28</td>
+            <td style="color: blue;" value="29">29</td>
+        </tr>
+        <tr>
+            <td style="color: red;" value="30">30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="color: blue;"></td>
+        </tr>
+    </table>
+
+    <div class="typing">
+        날짜: <input id="date" type="text" name="date"/><br/>
+        내용: <input id="content" type="text" name="content" value=""/><br/>
+        <input type="button" value="저장" onclick="addSchedule()"/>
+    </div>
+
+    <script>
+        // $("td").on("click", function(){
+            // console.log(this);
+            // console.log($(this).text());
+        // });
+
+        let date;
+        $("td").on("click", function(){
+            console.log(this);
+            $("#date").val(this.innerText);
+            date=this;
+        });
+
+        function addSchedule(){
+            let content=$("#content").val();
+            $(date).append(`<br/>`+content);
+        }
+    </script>
+</body>
+</html>

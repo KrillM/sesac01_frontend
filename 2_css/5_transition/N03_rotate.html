@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>CSS Rotate</title>
+</head>
+<body>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .div1:hover {
+            transform: rotate(45deg);
+            background-color: yellow;
+        }
+        .div2:hover {
+            transform: rotateX(45deg);
+            background-color: greenyellow;
+        }
+        .div3:hover {
+            transform: rotateY(45deg);
+            background-color: skyblue;
+        }
+    </style>
+    <div class="div1">rotate 45deg</div>
+    <div class="div2">rotateX 45deg</div>
+    <div class="div3">rotateY 45deg</div>
+</body>
+</html>

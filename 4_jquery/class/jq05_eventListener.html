@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>Event Listener</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        // 아래 코드는 container 클래스를 가진 div 태그가 로드되기 전에 실행한다.
+        console.log($(".container"));
+        
+        // 로딩 이벤트 : html, body 태그 내부까지 로드된 후 실행할 코드를 걸어준다.
+        $(document).ready(function(){
+            // body가 로드된 후 실행하고 싶은 코드
+            console.log($(".container"));
+        });
+
+        // jquery 3.0 이상 권장되는 문법
+        $(function(){
+            console.log($(".container"));
+        })
+    </script>
+    <style>
+        .container{
+            margin-top: 10px;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="container"></div>
+
+    <script>
+        // 동적 바인딩(일반 함수), 정적 바인딩(화살표 함수)
+        // 화살표 함수: 부모요소의 this를 저장함 (여기서는 window)
+        // function 함수: 동적 바인딩 -> 호출할 때를 고려하여 this를 결정한다.
+
+        $(".container").click(function(){ // 동적 바인딩으로 선언 要
+            console.log(this); // 이벤트가 걸린 요소를 디스에 담음
+            $(this).css("background-color", "darkblue") // 클릭한 요소가 변경
+            // $(".container").css("background-color","darkblue"); <-- container 전부를 수정
+        })
+
+        $(".container").mouseover(function(){ // 마우스가 올라갔을 때
+            console.log(this); 
+            $(this).css("background-color", "darkblue") 
+        })
+
+        $(".container").mouseout(function(){ // 마우스가 출타했을 때
+            console.log(this); 
+            $(this).css("background-color", "gold") 
+        })
+
+        $(document).scroll(function(){
+            if(document.body.scrollHeight >= "스크롤 위치"){
+                
+            }
+            console.log(document.body.scrollHeight);
+            console.log("hello");
+        })
+
+        $(document).scroll(function(){
+            // 스크롤이 바닥에 닿았을 때
+            if($(document).height - $(window).height == $(window).scrollTop){
+
+            }
+            console.log(document.body.scrollHeight);
+        })
+    </script>
+</body>
+</html>

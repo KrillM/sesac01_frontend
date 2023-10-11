@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function findChildren() {
+        // children() : 부모 요소를 선택했을 때 그 자식요소들을 반환
+        // document의 children과 동일
+        console.log($(".parent").children());
+        console.log($(".parent").children()[0]);
+        $(".parent").children().css("color", "blue");
+      }
+    </script>
+  </head>
+  <body>
+    <h5>요소 탐색</h5>
+    <div class="ancestor">
+      <div class="parent">
+        <div class="child1">자식1</div>
+        <div class="child2">자식2</div>
+        텍스트
+        <div class="child3">자식3</div>
+      </div>
+    </div>
+
+    <button onclick="findChildren()">findChildren</button>
+  </body>
+</html>

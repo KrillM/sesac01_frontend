@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>Україна</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        console.log($(".container"));
+        $(function(){
+            console.log($(".container"));
+        })
+    </script>
+    <style>
+        .container{
+            width: 600px;
+            height: 200px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="container"></div>
+
+    <script>
+        $(".container").hover(function(){   // 마우스오버
+            console.log(this);  
+            $(this).css("background-color", "blue") 
+        }, function(){                      // 마우스아웃
+            $(this).css("background-color", "yellow") 
+        })
+    </script>
+</body>
+</html>

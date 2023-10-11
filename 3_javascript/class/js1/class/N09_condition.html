@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>JavaScript</title>
+    <script>
+        // 기본 조건문
+        let ten = 10;
+        if(ten >=10){
+            console.log("true");
+        }
+        else{
+            console.log("false");
+        }
+
+        // else if
+        let city="sedney"
+        if(city=="paris"){
+            console.log("France");
+        }
+        else if(city=="sedney"){
+            console.log("Australia");
+        }
+        else{
+            console.log("Japan")
+        }
+
+        let add=0;
+        if(ten>=10){
+            add++;
+        }
+        if(ten>=10){
+            add++;
+        }
+        console.log(add);
+
+        // 이중 조건문
+        if(city=="sedney"){
+            if(ten>20){
+                console.log("New Zealand")
+            }
+            else if(ten-10==0){
+                console.log("Australia")
+            }
+            else{
+                console.log("Austria")
+            }
+        }
+
+        // switch
+        let choice=3;
+        switch(choice){
+            case 1:
+                ten++;
+            case 3:
+                ten*=2;
+            case 5:
+                ten+=ten;
+            default:
+                console.log(ten);
+        }
+
+        const vb = "비키니시티";
+        if(vb !== city){
+            console.log("아뇨 뚱인데요.")
+        }
+    
+        // 삼항 연산자
+        let num = 10;
+        num > 20 ? console.log("true"):console.log("false");
+
+        let msg = num < 20 ? "true":"false";
+        console.log(msg);
+    </script>
+</head>
+<body>
+</body>
+</html>

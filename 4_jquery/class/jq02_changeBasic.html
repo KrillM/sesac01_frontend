@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>jq02</title>
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous">
+    </script>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box red"></div>
+    <button type="button" onclick="red()">빨</button>
+    <button type="button" onclick="orange()">주</button>
+    <button type="button" onclick="yellow()">노</button>
+    <button type="button" onclick="green()">초</button>
+    <button type="button" onclick="blue()">파</button>
+    <button type="button" onclick="darkblue()">남</button>
+    <button type="button" onclick="purple()">보</button>
+    
+    <script>
+        function red(){
+            $(".box").css("background-color", "red");
+        }
+        function orange(){
+            $(".box").css("background-color", "orange");
+        }
+        function yellow(){
+            $(".box").css("background-color", "yellow");
+        }
+        function green(){
+            $(".box").css("background-color", "green");
+        }
+        function blue(){
+            $(".box").css("background-color", "blue");
+        }
+        function darkblue(){
+            $(".box").css("background-color", "darkblue");
+        }
+        function purple(){
+            $(".box").css("background-color", "purple");
+        }
+    </script>
+</body>
+</html>

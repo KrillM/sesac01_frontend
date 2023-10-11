@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0"/>
+    <title>CSS Flex Wrap</title>
+</head>
+<body>
+    <style>
+        .parent1 {
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+        }
+        .parent2 {
+            background-color: yellow;
+            display: flex;
+            justify-content: flex-end;
+        }
+        div div {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            background-color: white;
+            margin: 5px;
+        }
+    </style>
+    <div class="parent1">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </div>
+    <div class="parent2">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </div>
+</body>
+</html>

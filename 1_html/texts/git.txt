@@ -1,0 +1,185 @@
+Last login: Thu Sep 14 12:25:21 on ttys000
+myungbook@MyungBookui-MacBookAir ~ % cd desktop
+myungbook@MyungBookui-MacBookAir desktop % mkdir ct05
+myungbook@MyungBookui-MacBookAir desktop % cd ct05
+myungbook@MyungBookui-MacBookAir ct05 % git config --global --list
+user.name=KrillM
+user.email=mks160615@gmail.com
+init.defaultbranch=main
+myungbook@MyungBookui-MacBookAir ct05 % echo "# ct05" >> README.md
+myungbook@MyungBookui-MacBookAir ct05 % git init
+Initialized empty Git repository in /Users/myungbook/Desktop/ct05/.git/
+myungbook@MyungBookui-MacBookAir ct05 % git commit -m "first message"
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+myungbook@MyungBookui-MacBookAir ct05 % git add README.md
+myungbook@MyungBookui-MacBookAir ct05 % git commit -m "first message"
+[main (root-commit) 4db575b] first message
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+myungbook@MyungBookui-MacBookAir ct05 % git branch -M main
+myungbook@MyungBookui-MacBookAir ct05 % git remote add origin https://github.com/KrillM/ct05.git
+myungbook@MyungBookui-MacBookAir ct05 % git push -u origin main
+To https://github.com/KrillM/ct05.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/KrillM/ct05.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+myungbook@MyungBookui-MacBookAir ct05 % git pull
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 584 bytes | 146.00 KiB/s, done.
+From https://github.com/KrillM/ct05
+ * [new branch]      main       -> origin/main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+myungbook@MyungBookui-MacBookAir ct05 % git branch
+* main
+myungbook@MyungBookui-MacBookAir ct05 % git pull main main    
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+myungbook@MyungBookui-MacBookAir ct05 % git pull origin/main main
+fatal: 'origin/main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+myungbook@MyungBookui-MacBookAir ct05 % git branch --set-upstream-to=origin/main  main   
+branch 'main' set up to track 'origin/main'.
+myungbook@MyungBookui-MacBookAir ct05 % git pull
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+myungbook@MyungBookui-MacBookAir ct05 % code .
+zsh: command not found: code
+myungbook@MyungBookui-MacBookAir ct05 % git remote -v
+origin	https://github.com/KrillM/ct05.git (fetch)
+origin	https://github.com/KrillM/ct05.git (push)
+myungbook@MyungBookui-MacBookAir ct05 % git remote -r
+error: unknown switch `r'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+myungbook@MyungBookui-MacBookAir ct05 % git barnch -r
+git: 'barnch' is not a git command. See 'git --help'.
+
+The most similar command is
+	branch
+myungbook@MyungBookui-MacBookAir ct05 % git branch -r
+  origin/main
+myungbook@MyungBookui-MacBookAir ct05 % git pull origin/main mian
+fatal: 'origin/main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+myungbook@MyungBookui-MacBookAir ct05 % git pull origin/main main
+fatal: 'origin/main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+myungbook@MyungBookui-MacBookAir ct05 % git pull main main 
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+myungbook@MyungBookui-MacBookAir ct05 % git pull main origin/main
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+myungbook@MyungBookui-MacBookAir ct05 % git fetch                
+myungbook@MyungBookui-MacBookAir ct05 % git pull origin/main main
+fatal: 'origin/main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+myungbook@MyungBookui-MacBookAir ct05 % git fetch                
+myungbook@MyungBookui-MacBookAir ct05 % git fetch --all          
+myungbook@MyungBookui-MacBookAir ct05 % git remote update
+myungbook@MyungBookui-MacBookAir ct05 % git pull origin/main main
+fatal: 'origin/main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+myungbook@MyungBookui-MacBookAir ct05 % git pull                 
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+myungbook@MyungBookui-MacBookAir ct05 % git config pull.rebase false
+myungbook@MyungBookui-MacBookAir ct05 % git config pull.rebase true
+myungbook@MyungBookui-MacBookAir ct05 % git branh -M main
+git: 'branh' is not a git command. See 'git --help'.
+
+The most similar command is
+	branch
+myungbook@MyungBookui-MacBookAir ct05 % git branch -M main 
+myungbook@MyungBookui-MacBookAir ct05 % git pull 
+warning: skipped previously applied commit 4db575b
+hint: use --reapply-cherry-picks to include skipped commits
+hint: Disable this message with "git config advice.skippedCherryPicks false"
+Successfully rebased and updated refs/heads/main.
+myungbook@MyungBookui-MacBookAir ct05 % git config pull.ff only
+myungbook@MyungBookui-MacBookAir ct05 % git pull               
+Already up to date.
+myungbook@MyungBookui-MacBookAir ct05 % 

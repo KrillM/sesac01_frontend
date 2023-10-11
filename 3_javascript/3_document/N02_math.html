@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>math</title>
+    </head>
+    <body>
+        <script>
+            // 1. Math.min()
+            console.log(Math.min()); // Infinity
+            console.log(Math.min(1, 10, -100, 0)); // -100
+            console.log(Math.min(1, "-200", -100, 0)); // -200
+            console.log(Math.min(1, -10, "문자열", 0)); // NaN
+
+            // 2. Math.max()
+            console.log(Math.max()); // -Infinity
+            console.log(Math.max(1, 10, -100, 0)); // 10
+
+            // Math.random()
+            let min = 10;
+            let max = 20;
+            console.log(Math.random());
+            console.log(Math.random() * (max - min) + min); // min보다 크거나 같고 max보다 작은 무작위 숫자가 반환
+
+            // Math.round()
+            console.log(Math.round(10.49)); // 10
+            console.log(Math.round(-10.51)); // -11
+
+            // Math.floor()
+            console.log(Math.floor(10.95)); // 10
+            console.log(Math.floor(-11.1)); // -12
+
+            // Math.ceil()
+            console.log(Math.ceil(10.01)); // 11
+            console.log(Math.ceil(-11.9)); //-11
+        </script>
+    </body>
+</html>

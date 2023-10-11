@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/837ff3adc1.js" crossorigin="anonymous"></script>
+  <style>
+  :root {
+    --nav-height-lg: 100px;
+    --nav-height-sm: 60px;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+    text-align: center;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header {
+    width: 100%;
+    height: var(--nav-height-lg);
+    z-index: 100;
+    /* position: fixed; */
+  }
+
+  .inner {
+    display: flex;
+  } 
+
+  header .inner .logo {
+    display: flex;
+    color: white;
+    font-size: 30px;
+  }
+
+  header .inner {
+    background-color: lightblue;
+    height: 100%;
+  }
+
+  header .inner .menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  header .inner .menu li {
+    margin-right: 30px;
+    font-weight: bold;
+    justify-content: center;
+  }
+
+  /* 미디어 쿼리 작성 768px 이하일 때  */
+  @media screen and (max-width: 768px) {
+      header .inner .menu {
+        display: block;
+        width: 100%;
+        margin-top: 50px;
+      }
+
+      header .inner .menu li {
+        font-weight: 200;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      li{
+        background-color: greenyellow;
+      }
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <div class="logo">
+        <i class="fa-solid fa-igloo"></i>
+      </div>
+      <ul class="menu">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+      </ul>
+    </div>
+  </header>
+</body>
+</html>
